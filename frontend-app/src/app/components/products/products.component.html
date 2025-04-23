@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Gestión de Productos</h1>
+  
+    <form #f="ngForm" (ngSubmit)="submit(f)">
+      <input
+        name="name"
+        [(ngModel)]="model.name"
+        placeholder="Nombre"
+        required
+      />
+      <input
+        name="price"
+        type="number"
+        [(ngModel)]="model.price"
+        placeholder="Precio"
+        required
+        min="0"
+      />
+      <button type="submit">{{ editMode ? 'Actualizar' : 'Crear' }}</button>
+      <button type="button" (click)="resetForm(f)">Cancelar</button>
+    </form>
+  
+    <table *ngIf="products.length > 0">
+      <thead>
+        <tr><th>Nombre</th><th>Precio</th><th>Acciones</th></tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.name }}</td>
+          <td>{{ p.price | currency }}</td>
+          <td>
+            <button (click)="edit(p, f)">✏️</button>
+            <button (click)="remove(p.id!)">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <p *ngIf="products.length === 0">No hay productos.</p>
+  </div>  

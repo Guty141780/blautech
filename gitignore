@@ -1,0 +1,41 @@
+# Node modules
+**/node_modules/
+
+# Angular build output
+**/dist/
+**/build/
+
+# Environment files
+**/src/environments/*.ts
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+
+# Maven target
+**/target/
+
+# Spring Boot logs
+**/*.log
+
+# Docker
+**/.env
+**/docker-compose.override.yml
+
+# OS swap/temp files
+*.swp
+*.swo
+*~
+
+# Coverage reports
+coverage/

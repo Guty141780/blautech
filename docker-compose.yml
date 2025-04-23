@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  product-service:
+    build: ./product-service
+    container_name: product-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - product-service
+
+  frontend:
+    build:
+      context: ./frontend-app
+    container_name: frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - api-gateway
+
+volumes:
+  mongo-data:
