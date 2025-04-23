@@ -1,4 +1,4 @@
-# Product Management App
+# Product-service app
 
 Aplicación CRUD de productos construida con Angular, Spring Boot, API Gateway y MongoDB, orquestada completamente con Docker.
 
@@ -25,7 +25,7 @@ docker-compose.yml # Orquestador de todos los servicios
 1. Clonar el repositorio:
 
 ```bash
-git clone 
+git clone https://github.com/Guty141780/blautech.git
 ```
 
 2. Construir y levantar los contenedores:
@@ -47,7 +47,7 @@ Esto levanta:
 - `PUT    /api/products/{id}` → Actualizar producto
 - `DELETE /api/products/{id}` → Eliminar producto
 
-## 🧪 Prueba
+## Prueba
 
 Accedé a la app en tu navegador:
 
