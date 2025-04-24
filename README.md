@@ -65,5 +65,6 @@ Probá agregar, editar y eliminar productos desde la interfaz.
 
 - Se aplicaron buenas prácticas como DTOs, logs estructurados y separación por capas.
 - Incluye validaciones y manejo de errores.
+- Documentacion con swagger y test de integracion al controlador
 
 ---
