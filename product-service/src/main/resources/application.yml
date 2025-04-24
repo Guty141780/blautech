@@ -8,3 +8,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://mongo:27017/productdb
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
